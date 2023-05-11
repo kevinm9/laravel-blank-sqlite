@@ -64,3 +64,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate:fresh --seed
+php artisan serve
+***
+php artisan passport:install
+php artisan passport:keys
+php artisan storage:link
+
+
+
+DB_CONNECTION=sqlite
+DB_DATABASE=/workspaces/laravel-blank-sqlite/database/database.sqlite
+******************
+como eliminar todas las tablas de una base de datos MySQL. Sin embargo, si usas Laravel dispones de un comando para tal propósito.
+ php artisan db:wipe
+
+
+crear controlador indicando el modelo con –m y –r indica q cree los métodos basicos de un crud
+php artisan make:controller PacienteController -r -m Paciente
+
+ver tablas de bd 
+php artisan db:show --counts –views
+php artisan db:table users
+ver rutas
+php artisan route:list -c
+
